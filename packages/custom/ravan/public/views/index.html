@@ -1,0 +1,78 @@
+
+<div class="ravan-example" ng-controller="RavanController">
+ <!--  <h1>Example view from your new awesome package</h1>
+  <h2>Package: <span>{{package.name}}</span></h2>
+   -->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+      <h3>Users Comments</h3>
+      </div>
+    </div>
+    <div ng-repeat="comment in comments" class="row">
+      <div class="col-sm-1">
+        <div class="thumbnail">
+          <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+        </div>
+      </div>
+      <div class="col-sm-8">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <strong>{{comment.name ? comment.name : "Anonymous"}}</strong> <span class="text-muted">commented 5 days ago</span>
+          </div>
+          <div class="panel-body">
+            {{comment.text}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row top5">
+       <div class="col-sm-1">
+        <div class="thumbnail">
+          <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+        </div>
+      </div>
+      <div class="col-sm-8">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <strong>{{comment.name}}</strong> <span class="text-muted">Share Your Comment with us</span>
+          </div>
+          <div class="panel-media">
+            <div className="form-group">
+                <div className="controls">
+                  <textarea placeholder="comment ..." class="form-control" ng-model="newComment"></textarea>
+                </div>
+            </div>
+            <div className="form-group">
+              <div className="controls">
+              <button type="button" class="btn btn-primary btn-sm col-sm-2 col-sm-push-10" ng-click='addComment();'>Post Comment</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <ol>
+    <li>
+      <a ui-sref="ravan circles example({circle:'anyone'})">Server route that anyone can access</a>
+    </li>
+    <li>
+      <a ui-sref="ravan circles example({circle:'auth'})">Server route that requires authentication</a>
+    </li>
+    <li>
+      <a ui-sref="ravan circles example({circle:'admin'})">Server route that requires admin user</a>
+    </li>
+    <li>
+      <a href="/api/ravan/example/render" target="_self">Raw Html rendering example from using swig</a>
+    </li>
+  </ol>
+  <h3><img src="/ravan/assets/img/logo.png" /></h3>
+  </br>
+  <p class="alert alert-info">You can find your package in /packages/ravan</p>
+  </br>
+  <h3><a href="http://learn.mean.io">Documentation</a></h3>
+  </br>
+</div>
