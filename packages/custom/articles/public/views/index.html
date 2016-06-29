@@ -1,0 +1,8 @@
+<div ng-controller="ArticleController">
+	<h2>Articles</h2>
+	<div ng-repeat="article in articles">
+		<h3 ui-sref="article view({articleId:article._id})">{{article.title}}</h3>
+		<p>{{article.body}}...</p>
+		<span class="pull-right">{{article.name}}</span>
+	</div>
+</div>

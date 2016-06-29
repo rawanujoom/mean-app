@@ -1,0 +1,55 @@
+<div class="comment-example">
+  <div class="container">
+    <div class="row">
+      <div>
+        <h3>COMMENTS</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-1">
+        <div class="thumbnail">
+          <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+        </div>
+      </div>
+      <div class="comment-box col-sm-8">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <strong>{{comment.name}}</strong> <span class="text-muted">Share Your Comment with us</span>
+          </div>
+          <div class="panel-media">
+            <div className="form-group">
+                <div className="controls">
+                  <textarea placeholder="comment ..." class="form-control" ng-model="newComment"></textarea>
+                </div>
+            </div>
+            <div className="form-group">
+              <div className="controls">
+                <button type="button" class="btn btn-primary btn-sm col-sm-2 col-sm-push-10" ng-click='addComment();'>Post Comment
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div ng-repeat="comment in comments" class="row">
+      <div class="col-sm-1">
+        <div class="thumbnail">
+          <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+        </div>
+      </div>
+      <div class="col-sm-8">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <span><strong>{{comment.user_id ? comment.user_id == user._id ? "You" : comment.name : "Anonymous"}}</strong>
+            </span>
+            <span class="pull-right text-muted">{{comment.date}}</span>
+          </div>
+          <div class="panel-body">
+            {{comment.comment}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
