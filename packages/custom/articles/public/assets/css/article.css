@@ -1,0 +1,19 @@
+.list {
+  list-style-type: none;
+  width: 500px;
+}
+
+.article-title {
+  font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
+}
+
+.article {
+  margin: 20px;
+  padding: 10px;
+  overflow: auto;
+}
+
+.article li:hover {
+  background: #eee;
+  cursor: pointer;
+}
